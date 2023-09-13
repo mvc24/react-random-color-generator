@@ -19,7 +19,7 @@ export default function ColorDiv(props) {
         marginBottom: '0.6em',
       }}
     >
-      <p className="descriptionText">Generated color:</p>
+      <p className="descriptionText">Generated Color:</p>
       <break />
       <p className="colorName"> {props.bgColor}</p>
     </div>
