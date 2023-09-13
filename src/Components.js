@@ -27,7 +27,6 @@ export const Heading = styled.h1`
   font-size: 1.6rem;
   color: #191308;
   font-weight: 900;
-  width: 80vw;
 `;
 
 export const Container = styled.div`
@@ -45,7 +44,7 @@ export const Button = styled.button`
   font-family: 'Victor Mono', monospace;
   padding: 0.4rem;
   margin: 0.8rem 0rem;
-  border-radius: 3px;
+  border-radius: 4px;
   border: solid 1px #322a26;
   background-color: #f7f7f2;
 
@@ -58,6 +57,8 @@ export const Button = styled.button`
 
 export const FormDiv = styled.div`
   background-color: #e4e6c3;
+  padding: 16px;
+  border-radius: 16px;
   text-align: center;
   width: 70vw;
   margin: auto;

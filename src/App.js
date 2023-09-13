@@ -26,7 +26,7 @@ export default function App() {
   const [boxHeight, setBoxHeight] = useState('');
   const [boxWidth, setBoxWidth] = useState('');
   const [colorHue, setColorHue] = useState('');
-  const [colorLightness, setColorLightness] = useState('');
+  const [colorLuminosity, setColorLuminosity] = useState('');
   /*
    */
 
@@ -50,7 +50,12 @@ export default function App() {
       </ColorDiv>
       <Button
         onClick={() => {
-          setGeneratedColor(randomColor());
+          setGeneratedColor(
+            randomColor({
+              luminosity: colorLuminosity,
+              hue: colorHue,
+            }),
+          );
         }}
       >
         Generate
@@ -58,8 +63,70 @@ export default function App() {
 
       <FormDiv>
         <h2>You don't like randomness?</h2>
-        <label htmlFor="hue">Choose your colour:</label>
+        <p className="instructions">
+          Change as much as you like and go back to generating colours by
+          pressing the button
+        </p>
+        <p>Choose your colour:</p>
+        <input
+          name="hue"
+          onChange={(event) => setColorHue(event.target.value)}
+        />
         <br />
+        <p>Choose your luminosity:</p>
+        <span>Make it bright!</span>
+        <input
+          name="luminosity"
+          type="radio"
+          value="bright"
+          onChange={(event) => setColorLuminosity(event.target.value)}
+        />
+        <br />
+        <span>I like it light</span>
+        <input
+          name="luminosity"
+          type="radio"
+          value="light"
+          onChange={(event) => setColorLuminosity(event.target.value)}
+        />
+        <br />
+        <span>Keep it dark!</span>
+        <input
+          name="luminosity"
+          type="radio"
+          value="dark"
+          onChange={(event) => setColorLuminosity(event.target.value)}
+        />
+        <br />
+        <p>The size of this box is boring</p>
+        <label>
+          height
+          <input
+            name="boxHeight"
+            type="range"
+            min="100"
+            max="500"
+            value={boxHeight}
+            onChange={(event) => setBoxHeight(event.target.value)}
+          />
+        </label>
+        <label>
+          width
+          <input
+            name="boxWidth"
+            type="range"
+            min="200"
+            max="600"
+            value={boxWidth}
+            onChange={(event) => setBoxWidth(event.target.value)}
+          />
+        </label>
+        {/* The button doesn't reset anything yet
+        <Button type="reset" onClick={() => reset things} /> */}
+        <p className="instructions">
+          Please refresh the page to reset your values, because this developer
+          doesn't know how to create working reset buttons yet.
+        </p>
       </FormDiv>
     </Container>
   );
