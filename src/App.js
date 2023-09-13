@@ -39,9 +39,7 @@ export default function App() {
         height={boxHeight}
         color={fontColor}
         outline={generatedColor}
-      >
-        {generatedColor}
-      </ColorDiv>
+      />
       <Button
         onClick={() => {
           setGeneratedColor(

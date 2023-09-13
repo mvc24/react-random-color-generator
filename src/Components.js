@@ -13,12 +13,15 @@ export default function ColorDiv(props) {
         color: props.color,
         margin: 'auto',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: '0.6em',
       }}
     >
-      <span className="colorName">{props.bgColor}</span>
+      <p className="descriptionText">Generated color:</p>
+      <break />
+      <p className="colorName"> {props.bgColor}</p>
     </div>
   );
 }
