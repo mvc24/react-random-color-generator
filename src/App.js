@@ -3,13 +3,7 @@ import './index.css';
 // import { css } from '@emotion/react';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
-import ColorDiv, {
-  Button,
-  Container,
-  Form,
-  FormDiv,
-  Heading,
-} from './Components';
+import ColorDiv, { Button, Container, FormDiv, Heading } from './Components';
 
 // Color scheme
 // {"Moss green":"a6a15e","Moss green 2":"84894a","White":"fbfbfb","Raisin black":"2e2532","Raisin black 2":"201a23"}
