@@ -17,11 +17,11 @@ export default function ColorDiv(props) {
         alignItems: 'center',
         justifyContent: 'center',
         marginBottom: '0.6em',
-        fontSize: '1.2rem',
+        fontSize: '1rem',
         fontWeight: '600',
       }}
     >
-      Generated Color: <br /> {props.bgColor}
+      Generated Color: {props.bgColor}
     </div>
   );
 }
